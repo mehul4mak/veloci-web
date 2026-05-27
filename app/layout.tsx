@@ -19,15 +19,15 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://veloci.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Veloci — Agile project management for software teams",
+    default: "Veloci — The agile workspace built for shipping",
     template: "%s · Veloci",
   },
   description:
-    "Self-hostable, SaaS-ready, AI-assisted agile project management. Kanban, sprints, capacity planning, retros — in one Docker container.",
+    "Sprints, kanban, capacity planning, and an AI assistant — in one beautifully fast workspace. Built for teams that ship.",
   openGraph: {
-    title: "Veloci — Agile PM for software teams",
+    title: "Veloci — The agile workspace built for shipping",
     description:
-      "Self-hostable, SaaS-ready, AI-assisted agile project management.",
+      "Sprints, kanban, capacity planning, and an AI assistant — in one beautifully fast workspace.",
     url: siteUrl,
     siteName: "Veloci",
     type: "website",
@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Veloci",
-    description: "Agile PM for software teams. Self-hostable + SaaS-ready.",
+    description:
+      "The agile workspace built for shipping. Sprints, kanban, AI — done right.",
   },
 };
 
@@ -45,7 +46,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable} dark`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${mono.variable} dark`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>

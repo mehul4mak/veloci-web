@@ -6,13 +6,19 @@ const rows: { label: string; cells: [Cell, Cell, Cell, Cell] }[] = [
   { label: "Kanban + backlog + sprints", cells: ["yes", "yes", "yes", "yes"] },
   { label: "Cycles / PI planning", cells: ["yes", "yes", "yes", "partial"] },
   { label: "Triage inbox", cells: ["yes", "yes", "yes", "partial"] },
-  { label: "Capacity planning (days off)", cells: ["yes", "no", "no", "partial"] },
+  {
+    label: "Capacity planning (per-member days off)",
+    cells: ["yes", "no", "no", "partial"],
+  },
   { label: "Retrospective board (built-in)", cells: ["yes", "no", "no", "no"] },
-  { label: "AI assistant inline", cells: ["yes", "yes", "no", "yes"] },
-  { label: "Self-hostable single binary", cells: ["yes", "no", "yes", "no"] },
-  { label: "SaaS-ready (multi-tenant + billing)", cells: ["yes", "no", "no", "no"] },
-  { label: "SSO (Keycloak/OIDC) + RBAC", cells: ["yes", "yes", "yes", "yes"] },
+  { label: "AI assistant (workspace-aware)", cells: ["yes", "yes", "no", "partial"] },
+  { label: "Real-time sync & presence", cells: ["yes", "yes", "yes", "partial"] },
+  { label: "Sub-issues + dependency graph", cells: ["yes", "yes", "yes", "yes"] },
+  { label: "Roadmap / Gantt timeline", cells: ["yes", "yes", "yes", "yes"] },
+  { label: "SSO (SAML/OIDC) + RBAC", cells: ["yes", "yes", "yes", "yes"] },
   { label: "JIRA import (idempotent)", cells: ["yes", "yes", "partial", "yes"] },
+  { label: "Slack notifications", cells: ["yes", "yes", "yes", "yes"] },
+  { label: "Transparent per-seat pricing", cells: ["yes", "yes", "partial", "no"] },
 ];
 
 const headers = ["Veloci", "Linear", "Plane", "Jira / Asana"];
@@ -22,13 +28,15 @@ export function Comparison() {
     <section id="compare" className="border-b border-border/40 py-24">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            How Veloci compares
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-primary">
+            Compare
+          </div>
+          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+            How Veloci stacks up
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            We don&apos;t do everything. We do the agile workflow really well —
-            and we&apos;re the only one in this list you can run on your own
-            server.
+          <p className="mt-4 text-muted-foreground md:text-lg">
+            We&apos;re deliberately opinionated. The agile workflow, done
+            right — and priced like you matter.
           </p>
         </div>
 
@@ -87,5 +95,10 @@ function CellIcon({ value }: { value: Cell }) {
     return (
       <Minus className="mx-auto h-4 w-4 text-amber-500" aria-label="partial" />
     );
-  return <X className="mx-auto h-4 w-4 text-muted-foreground/60" aria-label="no" />;
+  return (
+    <X
+      className="mx-auto h-4 w-4 text-muted-foreground/60"
+      aria-label="no"
+    />
+  );
 }

@@ -16,17 +16,29 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          <Link href="#features" className="text-sm text-muted-foreground transition hover:text-foreground">
+          <Link
+            href="#features"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
+          >
             Features
           </Link>
-          <Link href="#compare" className="text-sm text-muted-foreground transition hover:text-foreground">
+          <Link
+            href="#compare"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
+          >
             Compare
           </Link>
-          <Link href="#pricing" className="text-sm text-muted-foreground transition hover:text-foreground">
+          <Link
+            href="#pricing"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
+          >
             Pricing
           </Link>
-          <Link href="https://github.com/mkumawat1/veloci" className="text-sm text-muted-foreground transition hover:text-foreground">
-            GitHub
+          <Link
+            href="#customers"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
+          >
+            Customers
           </Link>
         </nav>
 
@@ -35,7 +47,7 @@ export function SiteHeader() {
             <a href={`${APP_URL}/signin`}>Sign in</a>
           </Button>
           <Button size="sm" asChild>
-            <a href={`${APP_URL}/signup`}>Get started</a>
+            <a href={`${APP_URL}/signup`}>Start free</a>
           </Button>
         </div>
       </div>

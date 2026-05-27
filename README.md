@@ -1,6 +1,6 @@
 # veloci-web
 
-Marketing site for [Veloci](https://github.com/mkumawat1/veloci) — Next.js 15 + Tailwind v3 + shadcn-style components. Deploys to Vercel free tier.
+Marketing site for **Veloci** — the agile workspace built for shipping. Next.js 15 + Tailwind v3 + shadcn-style components. Deploys to Vercel free tier.
 
 ## Stack
 
@@ -69,7 +69,7 @@ app/
   globals.css         # Tailwind + design tokens
 components/
   site/               # header, footer
-  sections/           # hero, features, comparison, pricing, cta
+  sections/           # hero, trust-band, features, ai-callout, comparison, pricing, cta
   ui/                 # button, card, badge (shadcn-style)
 lib/
   utils.ts            # cn() helper

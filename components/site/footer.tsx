@@ -13,7 +13,7 @@ export function SiteFooter() {
             <span className="text-lg tracking-tight">Veloci</span>
           </Link>
           <p className="text-sm text-muted-foreground">
-            Agile project management for software teams.
+            The agile workspace built for shipping.
           </p>
         </div>
 
@@ -23,31 +23,41 @@ export function SiteFooter() {
             ["Features", "#features"],
             ["Compare", "#compare"],
             ["Pricing", "#pricing"],
+            ["Customers", "#customers"],
             ["Changelog", "#"],
+            ["Roadmap", "#"],
           ]}
         />
         <FooterCol
           title="Resources"
           links={[
             ["Documentation", "#"],
-            ["Self-host guide", "https://github.com/mkumawat1/veloci#readme"],
-            ["GitHub", "https://github.com/mkumawat1/veloci"],
+            ["Help center", "#"],
+            ["Integrations", "#"],
+            ["API", "#"],
             ["Status", "#"],
+            ["Security", "#"],
           ]}
         />
         <FooterCol
           title="Company"
           links={[
             ["About", "#"],
+            ["Customers", "#customers"],
             ["Contact", "mailto:hello@veloci.app"],
             ["Privacy", "#"],
             ["Terms", "#"],
+            ["DPA", "#"],
           ]}
         />
       </div>
       <div className="border-t border-border/40 py-6">
-        <div className="container text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Veloci. All rights reserved.
+        <div className="container flex flex-col items-center justify-between gap-2 text-center text-xs text-muted-foreground md:flex-row md:text-left">
+          <div>© {new Date().getFullYear()} Veloci, Inc. All rights reserved.</div>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            <span>All systems operational</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
 import { Hero } from "@/components/sections/hero";
+import { TrustBand } from "@/components/sections/trust-band";
 import { Features } from "@/components/sections/features";
 import { AiCallout } from "@/components/sections/ai-callout";
 import { Comparison } from "@/components/sections/comparison";
@@ -13,6 +14,7 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <TrustBand />
         <Features />
         <AiCallout />
         <Comparison />

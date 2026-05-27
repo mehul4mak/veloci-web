@@ -15,49 +15,75 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: "Self-host",
-    price: "Free",
-    blurb: "One Docker container on your hardware. Yours forever.",
+    name: "Free",
+    price: "$0",
+    period: "forever",
+    blurb: "For individuals and small teams getting started.",
     cta: {
-      label: "Get on GitHub",
-      href: "https://github.com/mkumawat1/veloci",
+      label: "Start free",
+      href: `${APP_URL}/signup`,
       variant: "outline",
     },
     features: [
-      "Unlimited users",
-      "Unlimited tasks & sprints",
-      "Keycloak SSO + RBAC",
-      "JIRA import, Slack webhooks",
+      "Up to 10 users",
+      "Unlimited tasks",
+      "2 active sprints",
+      "Kanban, backlog, retros",
+      "Slack & email integrations",
       "Community support",
     ],
   },
   {
-    name: "Team",
+    name: "Pro",
     price: "$8",
-    period: "per seat / month",
-    blurb: "Hosted SaaS for small teams. We run it, you ship.",
-    cta: { label: "Start free trial", href: `${APP_URL}/signup` },
+    period: "per user / month",
+    blurb: "For growing teams that need the full toolkit.",
+    cta: { label: "Start 14-day trial", href: `${APP_URL}/signup?plan=pro` },
     features: [
-      "Everything in Self-host",
-      "We host + back up",
-      "Custom subdomain",
-      "Magic-link sign-in",
-      "Email support",
+      "Everything in Free",
+      "Unlimited users & sprints",
+      "Claude AI assistant included",
+      "Capacity planning + roadmap",
+      "JIRA import + advanced integrations",
+      "Email support, < 24h",
     ],
     featured: true,
   },
   {
     name: "Business",
     price: "$16",
-    period: "per seat / month",
-    blurb: "For teams that need SSO, audit logs, and priority support.",
-    cta: { label: "Contact sales", href: "mailto:hello@veloci.app", variant: "outline" },
+    period: "per user / month",
+    blurb: "For scaling orgs that need security & control.",
+    cta: {
+      label: "Start trial",
+      href: `${APP_URL}/signup?plan=business`,
+      variant: "outline",
+    },
     features: [
-      "Everything in Team",
+      "Everything in Pro",
       "SSO (SAML / Google / Okta)",
+      "SCIM provisioning",
       "Audit log export",
-      "SLA + priority support",
-      "Custom data residency",
+      "99.95% uptime SLA",
+      "Priority support, < 4h",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    blurb: "For large orgs with custom needs.",
+    cta: {
+      label: "Talk to sales",
+      href: "mailto:sales@veloci.app",
+      variant: "outline",
+    },
+    features: [
+      "Everything in Business",
+      "SOC 2 Type II report",
+      "Custom data residency (EU / US)",
+      "Dedicated success manager",
+      "Custom contracts & invoicing",
+      "Onboarding & training",
     ],
   },
 ];
@@ -67,22 +93,26 @@ export function Pricing() {
     <section id="pricing" className="border-b border-border/40 py-24">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Pricing that respects your team
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-primary">
+            Pricing
+          </div>
+          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+            Simple pricing.{" "}
+            <span className="text-muted-foreground">No surprises.</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Self-host free forever. Or let us run it for you, billed per active
-            seat — no minimums.
+          <p className="mt-4 text-muted-foreground md:text-lg">
+            Free forever for small teams. Pay per active user, billed monthly
+            or annually. Cancel anytime.
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((p) => (
             <div
               key={p.name}
-              className={`relative rounded-2xl border p-6 ${
+              className={`relative flex flex-col rounded-2xl border p-6 ${
                 p.featured
-                  ? "border-primary/40 bg-card shadow-xl"
+                  ? "border-primary/40 bg-card shadow-2xl shadow-primary/10"
                   : "border-border/60 bg-card/40"
               }`}
             >
@@ -104,7 +134,9 @@ export function Pricing() {
                   </span>
                 )}
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{p.blurb}</p>
+              <p className="mt-2 min-h-[2.5rem] text-sm text-muted-foreground">
+                {p.blurb}
+              </p>
 
               <Button
                 className="mt-6 w-full"
@@ -125,6 +157,15 @@ export function Pricing() {
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+          All plans include unlimited tasks, real-time sync, 256-bit
+          encryption, and access on web + mobile.{" "}
+          <a href="mailto:sales@veloci.app" className="text-primary underline-offset-2 hover:underline">
+            Volume discounts available
+          </a>{" "}
+          for 100+ seats.
+        </p>
       </div>
     </section>
   );
