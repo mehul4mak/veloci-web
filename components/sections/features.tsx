@@ -15,8 +15,8 @@ const items = [
   },
   {
     icon: Sparkles,
-    title: "Claude AI built in",
-    body: "Split epics into stories. Estimate points. Draft acceptance criteria. Summarize retros. Workspace-aware and ~90% cheaper via prompt caching.",
+    title: "Bring your own AI",
+    body: "Connect OpenAI, Anthropic, Bedrock, Azure, or a self-hosted LLM. Plug in MCP servers for your data. Switch providers per workspace anytime.",
   },
   {
     icon: LayoutDashboard,

@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Sparkles, Plug, ChevronDown, Check } from "lucide-react";
 
 export function AiCallout() {
   return (
@@ -8,82 +8,139 @@ export function AiCallout() {
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
               <Sparkles className="h-3.5 w-3.5" />
-              AI built in
+              AI, your way
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Claude knows your sprint.
+            <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+              Bring your AI. Plug in your data.
             </h2>
-            <p className="mt-4 text-muted-foreground">
-              The assistant is workspace-aware — it sees your active sprint,
-              team, taxonomy, and components. System prompts use{" "}
-              <code className="rounded bg-secondary px-1.5 py-0.5 text-xs">cache_control: ephemeral</code>{" "}
-              so repeated requests cost ~90% less.
+            <p className="mt-4 text-muted-foreground md:text-lg">
+              Connect{" "}
+              <strong className="text-foreground">OpenAI, Anthropic,
+              AWS Bedrock, Azure OpenAI</strong>, or a{" "}
+              <strong className="text-foreground">self-hosted LLM</strong>{" "}
+              (Ollama, vLLM, LM Studio). Plug in MCP servers — GitHub,
+              JIRA, Notion, your internal docs — and the assistant gets
+              the context it needs to actually help.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
               {[
-                "Split this epic into 5 stories with acceptance criteria",
-                "Estimate points for these 12 tickets based on our velocity",
-                "Draft GIVEN/WHEN/THEN for VEL-243",
-                "Summarize this retro into three action items",
-              ].map((q) => (
-                <li key={q} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-primary" />
-                  <span className="text-muted-foreground">&ldquo;{q}&rdquo;</span>
+                ["BYOK", "Use your own API keys — your spend, your limits, your data residency."],
+                ["MCP-native", "Connect any Model Context Protocol server. Tools, prompts, and resources show up automatically."],
+                ["Per-workspace control", "Different team, different provider, different model. Switch anytime."],
+                ["Audit & observability", "Every prompt, every tool call, every token — logged and exportable."],
+              ].map(([title, body]) => (
+                <li key={title} className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-4 w-4 flex-none text-primary" />
+                  <span>
+                    <strong className="text-foreground">{title}.</strong>{" "}
+                    <span className="text-muted-foreground">{body}</span>
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <ChatMock />
+          <ProviderMock />
         </div>
       </div>
     </section>
   );
 }
 
-function ChatMock() {
+function ProviderMock() {
   return (
     <div className="relative">
       <div className="rounded-2xl border border-border/60 bg-card/60 p-6 shadow-xl backdrop-blur">
-        <div className="mb-4 flex items-center justify-between">
+        <div className="mb-5 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="grid h-7 w-7 place-items-center rounded-md bg-primary/15 text-primary">
               <Sparkles className="h-4 w-4" />
             </span>
-            <span className="text-sm font-medium">Ask Veloci AI</span>
+            <span className="text-sm font-medium">AI Settings</span>
           </div>
           <span className="font-mono text-[10px] text-muted-foreground">
-            claude-opus-4-7
+            workspace · acme
           </span>
         </div>
 
-        <div className="space-y-4">
-          <div className="ml-auto max-w-[80%] rounded-2xl rounded-tr-md bg-primary px-4 py-2.5 text-sm text-primary-foreground">
-            Split &quot;Multi-tenant billing&quot; epic into stories.
+        <div className="space-y-5">
+          <div>
+            <div className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">
+              Provider
+            </div>
+            <div className="flex items-center justify-between rounded-lg border border-border/60 bg-background/60 px-3 py-2.5">
+              <div className="flex items-center gap-3">
+                <span className="grid h-7 w-7 place-items-center rounded-md bg-orange-500/15 font-mono text-xs text-orange-400">
+                  A
+                </span>
+                <div>
+                  <div className="text-sm font-medium">Anthropic</div>
+                  <div className="font-mono text-[10px] text-muted-foreground">
+                    claude-opus-4-7
+                  </div>
+                </div>
+              </div>
+              <ChevronDown className="h-4 w-4 text-muted-foreground" />
+            </div>
+            <div className="mt-2 flex flex-wrap gap-1.5 text-[10px]">
+              {["OpenAI", "Bedrock", "Azure", "Ollama", "vLLM", "Custom"].map(
+                (p) => (
+                  <span
+                    key={p}
+                    className="rounded border border-border/60 bg-secondary/30 px-1.5 py-0.5 text-muted-foreground"
+                  >
+                    {p}
+                  </span>
+                )
+              )}
+            </div>
           </div>
 
-          <div className="max-w-[90%] space-y-2 rounded-2xl rounded-tl-md bg-secondary/60 px-4 py-3 text-sm">
-            <p>I&apos;ll break this into 5 stories sized for one sprint each:</p>
-            <ol className="ml-4 list-decimal space-y-1 text-muted-foreground">
-              <li>Stripe customer + subscription lifecycle (5pts)</li>
-              <li>Per-seat checkout flow (3pts)</li>
-              <li>Webhook handler for subscription.* events (5pts)</li>
-              <li>Seat enforcement on team add (3pts)</li>
-              <li>Customer portal link from settings (2pts)</li>
-            </ol>
-            <p className="pt-1">Total: 18pts. Want me to create them?</p>
+          <div>
+            <div className="mb-2 flex items-center justify-between text-xs uppercase tracking-wider text-muted-foreground">
+              <span>Connected MCP servers</span>
+              <span className="font-mono normal-case text-[10px]">3 active</span>
+            </div>
+            <ul className="space-y-1.5">
+              {[
+                ["GitHub", "stdio · 14 tools", true],
+                ["Linear → Veloci sync", "sse · 8 tools", true],
+                ["Internal docs", "http · 5 resources", true],
+                ["JIRA", "http · disabled", false],
+              ].map(([name, meta, on]) => (
+                <li
+                  key={name as string}
+                  className="flex items-center justify-between rounded-md border border-border/60 bg-background/60 px-3 py-2"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Plug
+                      className={`h-3.5 w-3.5 ${
+                        on ? "text-emerald-400" : "text-muted-foreground/50"
+                      }`}
+                    />
+                    <div>
+                      <div className="text-sm">{name}</div>
+                      <div className="font-mono text-[10px] text-muted-foreground">
+                        {meta}
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    className={`h-2 w-2 rounded-full ${
+                      on ? "bg-emerald-500" : "bg-muted-foreground/40"
+                    }`}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
 
-        <div className="mt-5 flex items-center gap-2 rounded-xl border border-border/60 bg-background/60 px-3 py-2">
-          <input
-            className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-            placeholder="Ask anything about your sprint…"
-            disabled
-          />
-          <kbd className="rounded border border-border/60 px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">
-            ⏎
-          </kbd>
+          <div className="flex items-center justify-between rounded-lg bg-secondary/30 px-3 py-2 text-xs">
+            <span className="text-muted-foreground">
+              Total spend · this month
+            </span>
+            <span className="font-mono">$12.84 / $200 cap</span>
+          </div>
         </div>
       </div>
       <div

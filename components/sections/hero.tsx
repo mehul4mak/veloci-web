@@ -12,7 +12,7 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <Badge className="mb-6">
             <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-            Now with Claude AI — split epics, estimate, summarize in seconds
+            BYOK + MCP — bring any AI provider, plug in your data
           </Badge>
           <h1 className="text-4xl font-semibold tracking-tight md:text-6xl lg:text-7xl">
             The agile workspace{" "}

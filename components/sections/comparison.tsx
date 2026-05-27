@@ -11,7 +11,7 @@ const rows: { label: string; cells: [Cell, Cell, Cell, Cell] }[] = [
     cells: ["yes", "no", "no", "partial"],
   },
   { label: "Retrospective board (built-in)", cells: ["yes", "no", "no", "no"] },
-  { label: "AI assistant (workspace-aware)", cells: ["yes", "yes", "no", "partial"] },
+  { label: "AI: BYOK + MCP (any provider)", cells: ["yes", "no", "no", "no"] },
   { label: "Real-time sync & presence", cells: ["yes", "yes", "yes", "partial"] },
   { label: "Sub-issues + dependency graph", cells: ["yes", "yes", "yes", "yes"] },
   { label: "Roadmap / Gantt timeline", cells: ["yes", "yes", "yes", "yes"] },
