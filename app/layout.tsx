@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-sans",
   display: "swap",
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -18,25 +20,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://veloci.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: "Veloci — The agile workspace built for shipping",
-    template: "%s · Veloci",
-  },
-  description:
-    "Sprints, kanban, capacity planning, and an AI assistant — in one beautifully fast workspace. Built for teams that ship.",
+  title: "Veloci — Sprints. Reimagined.",
+  description: "The agile workspace built for software teams that ship.",
+  icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Veloci — The agile workspace built for shipping",
-    description:
-      "Sprints, kanban, capacity planning, and an AI assistant — in one beautifully fast workspace.",
+    title: "Veloci — Sprints. Reimagined.",
+    description: "The agile workspace built for software teams that ship.",
     url: siteUrl,
     siteName: "Veloci",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veloci",
-    description:
-      "The agile workspace built for shipping. Sprints, kanban, AI — done right.",
+    title: "Veloci — Sprints. Reimagined.",
+    description: "The agile workspace built for software teams that ship.",
   },
 };
 
@@ -46,14 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${mono.variable} dark`}
-      suppressHydrationWarning
-    >
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-        {children}
-      </body>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
