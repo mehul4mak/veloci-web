@@ -223,7 +223,7 @@ export default function Home() {
             <div className="ai-layout">
               <ol className="ai-prompts">
                 <li><span className="n">01</span><span>&ldquo;Split this epic into 5 stories with acceptance criteria&rdquo;</span></li>
-                <li><span className="n">02</span><span>&ldquo;Estimate these 12 tickets using our 4-sprint velcyty&rdquo;</span></li>
+                <li><span className="n">02</span><span>&ldquo;Estimate these 12 tickets using our 4-sprint velocity&rdquo;</span></li>
                 <li><span className="n">03</span><span>&ldquo;Draft GIVEN / WHEN / THEN for VEL-243&rdquo;</span></li>
                 <li><span className="n">04</span><span>&ldquo;Summarize this retro into three action items&rdquo;</span></li>
                 <li><span className="n">05</span><span>&ldquo;Why did we miss last sprint? Show patterns.&rdquo;</span></li>
