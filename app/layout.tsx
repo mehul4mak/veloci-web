@@ -22,18 +22,26 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Velcy — Sprints. Reimagined.",
   description: "The agile workspace built for software teams that ship.",
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/velcy-favicon-16.svg", type: "image/svg+xml" },
+      { url: "/velcy-favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/velcy-icon-180.png",
+  },
   openGraph: {
     title: "Velcy — Sprints. Reimagined.",
     description: "The agile workspace built for software teams that ship.",
     url: siteUrl,
     siteName: "Velcy",
     type: "website",
+    images: [{ url: "/velcy-og-card.png", width: 1200, height: 630, alt: "Velcy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Velcy — Sprints. Reimagined.",
     description: "The agile workspace built for software teams that ship.",
+    images: ["/velcy-og-card.png"],
   },
 };
 

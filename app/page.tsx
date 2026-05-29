@@ -1,12 +1,10 @@
-import { Logo, LogoDefs } from "@/components/Logo";
+import { Logo } from "@/components/Logo";
 
 const APP = process.env.NEXT_PUBLIC_APP_URL || "https://app.velcy.app";
 
 export default function Home() {
   return (
     <div id="top">
-      <LogoDefs />
-
       {/* ===== nav ===== */}
       <header className="nav">
         <div className="wrap-wide nav-inner">
