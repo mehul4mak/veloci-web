@@ -1,6 +1,6 @@
 import { Logo, LogoDefs } from "@/components/Logo";
 
-const APP = process.env.NEXT_PUBLIC_APP_URL || "https://app.veloci.app";
+const APP = process.env.NEXT_PUBLIC_APP_URL || "https://app.velcy.app";
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
           <div className="product-frame">
             <div className="product-bar">
               <div className="traffic"><span /><span /><span /></div>
-              <div className="url">veloci.app / <b>acme / core-platform / sprint 24</b></div>
+              <div className="url">velcy.app / <b>acme / core-platform / sprint 24</b></div>
               <div style={{ width: 54 }} />
             </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
 
             <div className="ai-strip">
-              <span className="pill"><span className="sp">✦</span> Ask Veloci AI</span>
+              <span className="pill"><span className="sp">✦</span> Ask Velcy AI</span>
               <span className="prompt">&ldquo;Split this epic into 5 stories with acceptance criteria&rdquo;</span>
               <span className="kbd">⌘ K</span>
             </div>
@@ -225,7 +225,7 @@ export default function Home() {
             <div className="ai-layout">
               <ol className="ai-prompts">
                 <li><span className="n">01</span><span>&ldquo;Split this epic into 5 stories with acceptance criteria&rdquo;</span></li>
-                <li><span className="n">02</span><span>&ldquo;Estimate these 12 tickets using our 4-sprint velocity&rdquo;</span></li>
+                <li><span className="n">02</span><span>&ldquo;Estimate these 12 tickets using our 4-sprint velcyty&rdquo;</span></li>
                 <li><span className="n">03</span><span>&ldquo;Draft GIVEN / WHEN / THEN for VEL-243&rdquo;</span></li>
                 <li><span className="n">04</span><span>&ldquo;Summarize this retro into three action items&rdquo;</span></li>
                 <li><span className="n">05</span><span>&ldquo;Why did we miss last sprint? Show patterns.&rdquo;</span></li>
@@ -234,13 +234,13 @@ export default function Home() {
               <div className="chat-frame">
                 <div className="chat-head">
                   <span className="sp">✦</span>
-                  <span className="name">Veloci AI</span>
+                  <span className="name">Velcy AI</span>
                   <span className="model">claude-opus-4-7</span>
                 </div>
                 <div className="chat-body">
                   <div className="msg user">Split <b>&ldquo;Multi-tenant billing&rdquo;</b> epic into stories for next sprint.</div>
                   <div className="msg ai">
-                    <div className="label">Veloci AI · 4.2s · workspace-aware</div>
+                    <div className="label">Velcy AI · 4.2s · workspace-aware</div>
                     <p>I&apos;ll break this into 5 stories sized for a single sprint:</p>
                     <ol>
                       <li><span>Stripe customer + subscription lifecycle</span><span className="pts">5 pts</span></li>
@@ -274,7 +274,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div className="eyebrow">Compare</div>
-            <h2>How Veloci stacks up.</h2>
+            <h2>How Velcy stacks up.</h2>
             <p className="lede">We&apos;re deliberately opinionated. The agile workflow done right — and priced like you matter.</p>
           </div>
           <div className="compare-wrap">
@@ -282,7 +282,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th></th>
-                  <th className="us">Veloci</th>
+                  <th className="us">Velcy</th>
                   <th>Linear</th>
                   <th>Plane</th>
                   <th>Jira / Asana</th>
@@ -326,7 +326,7 @@ export default function Home() {
               cta={{ label: "Start trial", href: `${APP}/signup?plan=business`, variant: "outline" }} />
             <Tier name="Enterprise" amt="Custom" desc="For large orgs with custom needs & compliance."
               features={["Everything in Business", "SOC 2 Type II report", "Data residency (EU / US)", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training"]}
-              cta={{ label: "Talk to sales", href: "mailto:sales@veloci.app", variant: "outline" }} />
+              cta={{ label: "Talk to sales", href: "mailto:sales@velcy.app", variant: "outline" }} />
           </div>
         </div>
       </section>
@@ -334,11 +334,11 @@ export default function Home() {
       {/* ===== closer ===== */}
       <section className="closer">
         <div className="wrap">
-          <h2>Ship your next sprint.<br /><span className="grad">With Veloci.</span></h2>
+          <h2>Ship your next sprint.<br /><span className="grad">With Velcy.</span></h2>
           <p>Join the teams replacing Jira, Asana, and ClickUp with one beautifully fast workspace.</p>
           <div className="ctas">
             <a className="btn btn-primary btn-lg" href={`${APP}/signup`}>Start free <span className="arr">→</span></a>
-            <a className="btn btn-outline btn-lg" href="mailto:sales@veloci.app">Talk to sales</a>
+            <a className="btn btn-outline btn-lg" href="mailto:sales@velcy.app">Talk to sales</a>
           </div>
           <div className="meta">No credit card · Free forever for up to 10 users</div>
         </div>
@@ -355,11 +355,11 @@ export default function Home() {
             </div>
             <FootCol title="Product" links={[["Features", "#features"], ["Compare", "#compare"], ["Pricing", "#pricing"], ["Changelog", "#changelog"], ["Roadmap", "#roadmap"]]} />
             <FootCol title="Resources" links={[["Documentation", "#docs"], ["Help center", "#help"], ["API reference", "#api"], ["Status", "#status"], ["Security", "#security"]]} />
-            <FootCol title="Company" links={[["About", "#about"], ["Customers", "#customers"], ["Contact", "mailto:hello@veloci.app"], ["Careers", "#careers"], ["Press", "#press"]]} />
+            <FootCol title="Company" links={[["About", "#about"], ["Customers", "#customers"], ["Contact", "mailto:hello@velcy.app"], ["Careers", "#careers"], ["Press", "#press"]]} />
             <FootCol title="Legal" links={[["Privacy", "#privacy"], ["Terms", "#terms"], ["DPA", "#dpa"], ["Cookies", "#cookies"]]} />
           </div>
           <div className="foot-bottom">
-            <span>© 2026 Veloci, Inc. All rights reserved.</span>
+            <span>© 2026 Velcy, Inc. All rights reserved.</span>
             <div className="links">
               <a href="#twitter">Twitter</a>
               <a href="#github">GitHub</a>

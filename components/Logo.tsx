@@ -1,5 +1,5 @@
-// Veloci wordmark: a gradient rounded-square with a clean chevron "V"
-// (the velocity vector). LogoDefs renders the shared SVG symbol once;
+// Velcy wordmark: a gradient rounded-square with a clean chevron "V"
+// (the velcyty vector). LogoDefs renders the shared SVG symbol once;
 // Logo references it via <use> so the mark can repeat cheaply.
 
 export function LogoDefs() {
@@ -26,13 +26,13 @@ export function LogoDefs() {
   );
 }
 
-export function Logo({ label = "Veloci home" }: { label?: string }) {
+export function Logo({ label = "Velcy home" }: { label?: string }) {
   return (
     <a href="#top" className="logo" aria-label={label}>
       <svg className="logo-mark">
         <use href="#logo-mark" />
       </svg>
-      <span className="logo-word">Veloci</span>
+      <span className="logo-word">Velcy</span>
     </a>
   );
 }

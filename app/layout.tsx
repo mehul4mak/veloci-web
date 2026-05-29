@@ -16,23 +16,23 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://veloci.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://velcy.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Veloci — Sprints. Reimagined.",
+  title: "Velcy — Sprints. Reimagined.",
   description: "The agile workspace built for software teams that ship.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Veloci — Sprints. Reimagined.",
+    title: "Velcy — Sprints. Reimagined.",
     description: "The agile workspace built for software teams that ship.",
     url: siteUrl,
-    siteName: "Veloci",
+    siteName: "Velcy",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veloci — Sprints. Reimagined.",
+    title: "Velcy — Sprints. Reimagined.",
     description: "The agile workspace built for software teams that ship.",
   },
 };

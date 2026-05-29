@@ -1,6 +1,6 @@
-# veloci-web
+# velcy-web
 
-Marketing site for **Veloci** — the agile workspace built for shipping. Next.js 15 + Tailwind v3 + shadcn-style components. Deploys to Vercel free tier.
+Marketing site for **Velcy** — the agile workspace built for shipping. Next.js 15 + Tailwind v3 + shadcn-style components. Deploys to Vercel free tier.
 
 ## Stack
 
@@ -26,13 +26,13 @@ Vercel's Hobby tier is free forever for personal projects — no card needed. Tw
 
 ### Option A — push to GitHub, import in dashboard (recommended)
 
-1. Push this repo to GitHub (any name, e.g. `veloci-web`).
+1. Push this repo to GitHub (any name, e.g. `velcy-web`).
 2. Go to [vercel.com/new](https://vercel.com/new) → **Sign in with GitHub** (free).
-3. Click **Import** next to `veloci-web`. Vercel auto-detects Next.js — leave every default as-is.
+3. Click **Import** next to `velcy-web`. Vercel auto-detects Next.js — leave every default as-is.
 4. Open **Environment Variables** and add:
-   - `NEXT_PUBLIC_SITE_URL` → e.g. `https://veloci-web.vercel.app` (Vercel will tell you the URL; you can come back and update after the first deploy)
-   - `NEXT_PUBLIC_APP_URL` → e.g. `https://app.veloci.app` (or your Cloudflare-tunneled dev URL for now)
-5. Click **Deploy**. ~90 seconds later you get `https://veloci-web.vercel.app`.
+   - `NEXT_PUBLIC_SITE_URL` → e.g. `https://velcy-web.vercel.app` (Vercel will tell you the URL; you can come back and update after the first deploy)
+   - `NEXT_PUBLIC_APP_URL` → e.g. `https://app.velcy.app` (or your Cloudflare-tunneled dev URL for now)
+5. Click **Deploy**. ~90 seconds later you get `https://velcy-web.vercel.app`.
 
 Every `git push` to `main` triggers a production redeploy. Every push to any other branch gets a unique preview URL.
 
@@ -47,10 +47,10 @@ vercel --prod           # promote to production
 
 ### Add your custom domain (once you buy one)
 
-1. Buy `veloci.app` (or `.xyz`, etc.) at [Cloudflare Registrar](https://dash.cloudflare.com) — cheapest, no markup.
-2. In Vercel: **Project → Settings → Domains → Add** → `veloci.app`.
+1. Buy `velcy.app` (or `.xyz`, etc.) at [Cloudflare Registrar](https://dash.cloudflare.com) — cheapest, no markup.
+2. In Vercel: **Project → Settings → Domains → Add** → `velcy.app`.
 3. Vercel shows you 1–2 DNS records to add. Add them in Cloudflare DNS (proxy off / "DNS only"). Wait ~1 min for SSL.
-4. Update `NEXT_PUBLIC_SITE_URL=https://veloci.app` and redeploy.
+4. Update `NEXT_PUBLIC_SITE_URL=https://velcy.app` and redeploy.
 
 ### Free tier limits to know
 
