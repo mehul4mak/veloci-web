@@ -1,0 +1,14 @@
+{
+  "name": "Velcy",
+  "short_name": "Velcy",
+  "description": "Sprints. Reimagined. The agile workspace built for software teams that ship.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0A84FF",
+  "icons": [
+    { "src": "/velcy-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/velcy-app-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/velcy-app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

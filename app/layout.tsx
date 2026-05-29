@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#0A84FF",
+};
 
 const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -22,10 +26,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Velcy — Sprints. Reimagined.",
   description: "The agile workspace built for software teams that ship.",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/velcy-favicon-16.svg", type: "image/svg+xml" },
+      { url: "/velcy-favicon-16.png", sizes: "16x16", type: "image/png" },
       { url: "/velcy-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/velcy-icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/velcy-app-icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: "/velcy-icon-180.png",
   },
