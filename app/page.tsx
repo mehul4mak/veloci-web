@@ -29,7 +29,7 @@ export default function Home() {
         <div className="wrap">
           <a className="hero-tag" href="#ai">
             <span className="pill">New</span>
-            <span>Claude AI <span className="a">— now in every sprint</span></span>
+            <span>Bring your own AI <span className="a">— in every sprint</span></span>
           </a>
           <h1>Sprints. <span className="grad">Reimagined.</span></h1>
           <p className="hero-sub">The agile workspace built for software teams that ship.</p>
@@ -141,8 +141,8 @@ export default function Home() {
 
             <div className="tile t-narrow tile-dark">
               <div className="tile-tag">Intelligence</div>
-              <h3>Claude AI built in.</h3>
-              <p>Split, estimate, draft, summarize. Workspace-aware.</p>
+              <h3>Bring your own AI.</h3>
+              <p>Connect OpenAI, Anthropic, Bedrock or a local model — split, estimate, draft, summarize. Workspace-aware.</p>
               <div className="tile-visual">
                 <div className="v-chat">
                   <div className="me">Estimate these 8 tickets</div>
@@ -194,15 +194,14 @@ export default function Home() {
 
             <div className="tile t-wide">
               <div className="tile-tag">Trust</div>
-              <h3>Enterprise-ready from day one.</h3>
-              <p>SSO (SAML, Google, Okta), role-based access, audit logs, AES-256 at rest, SOC 2 Type II in progress.</p>
+              <h3>Secure by default.</h3>
+              <p>Passwordless magic-link sign-in, role-based access per workspace, and AES-256 encryption for the AI keys you connect — they never leave your backend in plaintext.</p>
               <div className="tile-visual">
                 <div className="v-shield" style={{ display: "flex", flexDirection: "row", gap: 10, flexWrap: "wrap" }}>
-                  <div className="badge"><span className="ic">✓</span> SAML SSO</div>
-                  <div className="badge"><span className="ic">✓</span> SCIM</div>
-                  <div className="badge"><span className="ic">✓</span> AES-256</div>
-                  <div className="badge"><span className="ic">✓</span> GDPR</div>
-                  <div className="badge prog"><span className="ic">…</span> SOC 2 — in progress</div>
+                  <div className="badge"><span className="ic">✓</span> Magic-link auth</div>
+                  <div className="badge"><span className="ic">✓</span> Role-based access</div>
+                  <div className="badge"><span className="ic">✓</span> AES-256 key encryption</div>
+                  <div className="badge prog"><span className="ic">…</span> SSO / SOC 2 — on the roadmap</div>
                 </div>
               </div>
             </div>
@@ -215,9 +214,9 @@ export default function Home() {
         <div className="ai-section" id="ai">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">AI built in</div>
-              <h2>Claude knows your <span className="grad">sprint.</span></h2>
-              <p className="lede">The assistant is <strong>workspace-aware</strong>. It sees your active sprint, team, taxonomy, and components — and uses prompt caching so repeated requests cost ~90% less.</p>
+              <div className="eyebrow">Bring your own AI</div>
+              <h2>Your AI knows your <span className="grad">sprint.</span></h2>
+              <p className="lede">Connect your own provider — OpenAI, Anthropic, Bedrock, Azure, or a local model via Ollama. The assistant is <strong>workspace-aware</strong>: it sees your active sprint, team, taxonomy, and components. Your keys stay yours.</p>
             </div>
 
             <div className="ai-layout">
@@ -233,7 +232,7 @@ export default function Home() {
                 <div className="chat-head">
                   <span className="sp">✦</span>
                   <span className="name">Velcy AI</span>
-                  <span className="model">claude-opus-4-7</span>
+                  <span className="model">your model</span>
                 </div>
                 <div className="chat-body">
                   <div className="msg user">Split <b>&ldquo;Multi-tenant billing&rdquo;</b> epic into stories for next sprint.</div>
@@ -317,13 +316,13 @@ export default function Home() {
               features={["Up to 10 users", "Unlimited tasks", "2 active sprints", "Kanban, backlog, retros", "Slack & email integrations", "Community support"]}
               cta={{ label: "Start free", href: `${APP}/signup`, variant: "outline" }} />
             <Tier popular name="Pro" amt="$8" per="/ user / mo" desc="For growing teams that need the full toolkit."
-              features={["Everything in Free", "Unlimited users & sprints", "Claude AI assistant included", "Capacity planning + roadmap", "JIRA import + integrations", "Email support, < 24h"]}
+              features={["Everything in Free", "Unlimited users & sprints", "Bring-your-own-AI assistant (BYOK + MCP)", "Capacity planning + roadmap", "JIRA import + integrations", "Email support, < 24h"]}
               cta={{ label: "Start 14-day trial", href: `${APP}/signup?plan=pro`, variant: "primary" }} />
-            <Tier name="Business" amt="$16" per="/ user / mo" desc="For scaling orgs that need security & control."
-              features={["Everything in Pro", "SSO (SAML / Google / Okta)", "SCIM provisioning", "Audit log export", "99.95% uptime SLA", "Priority support, < 4h"]}
+            <Tier name="Business" amt="$16" per="/ user / mo" desc="For scaling teams that want priority support."
+              features={["Everything in Pro", "Capacity planning + roadmap", "JIRA import + integrations", "Priority email support, < 4h"]}
               cta={{ label: "Start trial", href: `${APP}/signup?plan=business`, variant: "outline" }} />
-            <Tier name="Enterprise" amt="Custom" desc="For large orgs with custom needs & compliance."
-              features={["Everything in Business", "SOC 2 Type II report", "Data residency (EU / US)", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training"]}
+            <Tier name="Enterprise" amt="Custom" desc="For large orgs with custom needs."
+              features={["Everything in Business", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training", "Self-host option"]}
               cta={{ label: "Talk to sales", href: "mailto:sales@velcy.app", variant: "outline" }} />
           </div>
         </div>
