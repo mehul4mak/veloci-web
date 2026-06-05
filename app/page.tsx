@@ -1,6 +1,7 @@
 import { Logo } from "@/components/Logo";
 
-const APP = process.env.NEXT_PUBLIC_APP_URL || "https://app.velcy.app";
+// Hard-pinned so a stale Vercel env var can't repoint the buttons to the old domain.
+const APP = "https://app.velcy.app";
 
 export default function Home() {
   return (
@@ -18,8 +19,7 @@ export default function Home() {
             <a href="#changelog">Changelog</a>
           </nav>
           <div className="nav-actions">
-            <a className="btn btn-link btn-sm" href={`${APP}/signin`}>Sign in</a>
-            <a className="btn btn-dark btn-sm" href={`${APP}/signup`}>Get started</a>
+            <a className="btn btn-dark btn-sm" href={`${APP}/signin`}>Sign in</a>
           </div>
         </div>
       </header>
@@ -34,7 +34,7 @@ export default function Home() {
           <h1>Sprints. <span className="grad">Reimagined.</span></h1>
           <p className="hero-sub">The agile workspace built for software teams that ship.</p>
           <div className="hero-ctas">
-            <a className="btn btn-primary btn-lg" href={`${APP}/signup`}>Start free <span className="arr">→</span></a>
+            <a className="btn btn-primary btn-lg" href={`${APP}/signin`}>Sign in <span className="arr">→</span></a>
             <a className="btn btn-outline btn-lg" href="#demo">Watch the demo</a>
           </div>
           <div className="hero-meta">
@@ -111,7 +111,7 @@ export default function Home() {
             <Stat v="<50" sup="ms" l="Interaction latency" />
             <Stat v="90" sup="%" l="Cheaper AI via prompt cache" />
             <Stat v="99.95" sup="%" l="Uptime SLA on Business" />
-            <Stat v="60" sup="s" l="From signup to first sprint" />
+            <Stat v="60" sup="s" l="From sign-in to first sprint" />
           </div>
         </div>
       </section>
@@ -309,18 +309,18 @@ export default function Home() {
           <div className="section-head">
             <div className="eyebrow">Pricing</div>
             <h2>Simple pricing.<br />No surprises.</h2>
-            <p className="lede">Free forever for small teams. Pay per active user, billed monthly or annually. Cancel anytime.</p>
+            <p className="lede">Free forever for small teams. Pay per active seat, billed monthly or annually. Cancel anytime.</p>
           </div>
           <div className="price-grid">
-            <Tier name="Free" amt="$0" per="forever" desc="For individuals and small teams getting started."
+            <Tier name="Free" amt="€0" per="forever" desc="For individuals and small teams getting started."
               features={["Up to 10 users", "Unlimited tasks", "2 active sprints", "Kanban, backlog, retros", "Slack & email integrations", "Community support"]}
-              cta={{ label: "Start free", href: `${APP}/signup`, variant: "outline" }} />
-            <Tier popular name="Pro" amt="$8" per="/ user / mo" desc="For growing teams that need the full toolkit."
+              cta={{ label: "Sign in", href: `${APP}/signin`, variant: "outline" }} />
+            <Tier popular name="Pro" amt="€3" per="/ seat / mo" desc="For growing teams that need the full toolkit."
               features={["Everything in Free", "Unlimited users & sprints", "Bring-your-own-AI assistant (BYOK + MCP)", "Capacity planning + roadmap", "JIRA import + integrations", "Email support, < 24h"]}
-              cta={{ label: "Start 14-day trial", href: `${APP}/signup?plan=pro`, variant: "primary" }} />
-            <Tier name="Business" amt="$16" per="/ user / mo" desc="For scaling teams that want priority support."
+              cta={{ label: "Sign in", href: `${APP}/signin`, variant: "primary" }} />
+            <Tier name="Business" amt="€10" per="/ seat / mo" desc="For scaling teams that want priority support."
               features={["Everything in Pro", "Capacity planning + roadmap", "JIRA import + integrations", "Priority email support, < 4h"]}
-              cta={{ label: "Start trial", href: `${APP}/signup?plan=business`, variant: "outline" }} />
+              cta={{ label: "Sign in", href: `${APP}/signin`, variant: "outline" }} />
             <Tier name="Enterprise" amt="Custom" desc="For large orgs with custom needs."
               features={["Everything in Business", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training", "Self-host option"]}
               cta={{ label: "Talk to sales", href: "mailto:sales@velcy.app", variant: "outline" }} />
@@ -334,7 +334,7 @@ export default function Home() {
           <h2>Ship your next sprint.<br /><span className="grad">With Velcy.</span></h2>
           <p>Join the teams replacing Jira, Asana, and ClickUp with one beautifully fast workspace.</p>
           <div className="ctas">
-            <a className="btn btn-primary btn-lg" href={`${APP}/signup`}>Start free <span className="arr">→</span></a>
+            <a className="btn btn-primary btn-lg" href={`${APP}/signin`}>Sign in <span className="arr">→</span></a>
             <a className="btn btn-outline btn-lg" href="mailto:sales@velcy.app">Talk to sales</a>
           </div>
           <div className="meta">No credit card · Free forever for up to 10 users</div>

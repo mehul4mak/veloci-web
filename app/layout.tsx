@@ -20,7 +20,8 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://velcy.app";
+// Hard-pinned so a stale Vercel env var can't override the canonical/OG domain.
+const siteUrl = "https://velcy.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
