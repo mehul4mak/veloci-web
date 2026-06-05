@@ -15,10 +15,9 @@ export default function Home() {
             <a href="#ai">AI</a>
             <a href="#compare">Compare</a>
             <a href="#pricing">Pricing</a>
-            <a href="#customers">Customers</a>
-            <a href="#changelog">Changelog</a>
           </nav>
           <div className="nav-actions">
+            <a className="nav-demo" href="#demo">Live demo</a>
             <a className="btn btn-dark btn-sm" href={`${APP}/signin`}>Sign in</a>
           </div>
         </div>

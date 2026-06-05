@@ -85,8 +85,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-radius: 980px; transition: background .2s ease, color .2s ease;
 }
 .nav-links a:hover { color: var(--ink); background: var(--bg-soft); }
-.nav-actions { display: flex; align-items: center; gap: 8px; }
-@media (max-width: 880px) { .nav-links { display: none; } }
+.nav-actions { display: flex; align-items: center; gap: 14px; }
+.nav-demo { font-size: 13px; font-weight: 500; color: var(--ink-2); transition: color .2s ease; }
+.nav-demo:hover { color: var(--accent); }
+@media (max-width: 880px) { .nav-links, .nav-demo { display: none; } }
 
 /* ============ logo ============ */
 .logo { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; }
