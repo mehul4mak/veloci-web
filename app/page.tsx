@@ -313,16 +313,16 @@ export default function Home() {
           </div>
           <div className="price-grid">
             <Tier name="Free" amt="€0" per="forever" desc="For individuals and small teams getting started."
-              features={["Up to 10 users", "Unlimited tasks", "2 active sprints", "Kanban, backlog, retros", "Slack & email integrations", "Community support"]}
+              features={["Up to 10 users", "Unlimited tasks & sprints", "Board, backlog, triage & retros", "Roadmap, capacity & PI planning", "Velocity & reports", "Bring-your-own-AI (BYOK + MCP)", "Slack notifications + JIRA import", "Community support"]}
               cta={{ label: "Sign in", href: `${APP}/signin`, variant: "outline" }} />
-            <Tier popular name="Pro" amt="€3" per="/ seat / mo" desc="For growing teams that need the full toolkit."
-              features={["Everything in Free", "Unlimited users & sprints", "Bring-your-own-AI assistant (BYOK + MCP)", "Capacity planning + roadmap", "JIRA import + integrations", "Email support, < 24h"]}
+            <Tier popular name="Pro" amt="€3" per="/ seat / mo" desc="For teams that have outgrown the 10-user free tier."
+              features={["Everything in Free", "Unlimited users", "The full toolkit, no feature limits", "Email support, < 24h"]}
               cta={{ label: "Sign in", href: `${APP}/signin`, variant: "primary" }} />
-            <Tier name="Business" amt="€10" per="/ seat / mo" desc="For scaling teams that want priority support."
-              features={["Everything in Pro", "Capacity planning + roadmap", "JIRA import + integrations", "Priority email support, < 4h"]}
+            <Tier name="Business" amt="€10" per="/ seat / mo" desc="For scaling teams that want faster, priority support."
+              features={["Everything in Pro", "Priority email support, < 4h", "Onboarding assistance"]}
               cta={{ label: "Sign in", href: `${APP}/signin`, variant: "outline" }} />
             <Tier name="Enterprise" amt="Custom" desc="For large orgs with custom needs."
-              features={["Everything in Business", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training", "Self-host option"]}
+              features={["Everything in Business", "Self-host option", "Dedicated success manager", "Custom contracts & invoicing", "Onboarding & training"]}
               cta={{ label: "Talk to sales", href: "mailto:sales@velcy.app", variant: "outline" }} />
           </div>
         </div>
