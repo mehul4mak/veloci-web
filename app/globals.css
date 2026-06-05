@@ -350,3 +350,33 @@ footer { background: var(--bg-soft); padding: 64px 0 32px; font-size: 13px; colo
 .foot-bottom .links { display: flex; gap: 20px; }
 .foot-bottom .links a { color: var(--ink-3); }
 .foot-bottom .links a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ============================================================
+   Mobile / tablet polish — phones & small tablets (≤720px)
+   ============================================================ */
+@media (max-width: 720px) {
+  /* Hero product mockup: a 4-col kanban + fixed-width toolbar can't fit a
+     phone — let the chrome wrap and drop the kanban to 2 readable columns. */
+  .hero-product { margin-top: 48px; padding: 0 16px; }
+  .product-bar { padding: 12px 14px; gap: 10px; }
+  .product-bar .url { min-width: 0; flex: 1; font-size: 11px; }
+  .app-toolbar { flex-wrap: wrap; gap: 10px 14px; padding: 14px 16px; }
+  .app-toolbar .progress { margin-left: 0; }
+  .app-toolbar .bar { width: 120px; }
+  .kanban { grid-template-columns: repeat(2, 1fr); min-height: 0; }
+  .col { border-right: 0; border-bottom: 1px solid var(--divider-soft); }
+  .ai-strip { padding: 14px 16px; flex-wrap: wrap; }
+  .ai-strip .kbd { margin-left: 0; }
+
+  /* Tighten the generous desktop vertical rhythm so sections aren't endless. */
+  .stats { padding: 56px 0; }
+  .section-head { margin-bottom: 40px; }
+  .closer { padding: 96px 0; }
+}
+
+@media (max-width: 560px) {
+  .hero h1 { font-size: clamp(34px, 11vw, 64px); }
+  .hero-sub { font-size: clamp(17px, 4.6vw, 22px); }
+  .kanban { grid-template-columns: 1fr; }
+  .product-frame { border-radius: 16px; }
+}
