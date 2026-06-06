@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/velcy-favicon-16.svg", type: "image/svg+xml" },
-      { url: "/velcy-favicon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/velcy-favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/velcy-icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/velcy-app-icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/velcy-favicon-16.svg?v=3", type: "image/svg+xml" },
+      { url: "/velcy-favicon-16.png?v=3", sizes: "16x16", type: "image/png" },
+      { url: "/velcy-favicon-32.png?v=3", sizes: "32x32", type: "image/png" },
+      { url: "/velcy-icon-192.png?v=3", sizes: "192x192", type: "image/png" },
+      { url: "/velcy-app-icon-512.png?v=3", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/velcy-icon-180.png",
+    apple: "/velcy-icon-180.png?v=3",
   },
   openGraph: {
     title: "Velcy — Sprints. Reimagined.",
